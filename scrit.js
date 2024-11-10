@@ -1,28 +1,29 @@
-// Função para o comando Ping
-function pingCommand() {
-    document.getElementById('ping-result').textContent = "Pong! O bot está online.";
-  }
-  
-  // Função para o comando Ban
-  function banCommand() {
-    let result = prompt("Digite o nome de usuário para banir:");
-    if (result) {
-      document.getElementById('ban-result').textContent = `Usuário ${result} banido com sucesso!`;
-    } else {
-      document.getElementById('ban-result').textContent = "Nenhum usuário foi banido.";
+function executeCommand(command) {
+    let resultText = "";
+
+    switch (command) {
+        case 'ping':
+            resultText = "Pong! O comando Ping foi executado com sucesso.";
+            break;
+        case 'say':
+            resultText = "O comando Say foi executado. O bot diz: 'Olá, mundo!'";
+            break;
+        case 'ban':
+            resultText = "Você tem permissão para banir usuários!";
+            break;
+        case 'kick':
+            resultText = "Você tem permissão para expulsar usuários!";
+            break;
+        case 'ship':
+            resultText = "Você foi 'shipado' com alguém. Que legal!";
+            break;
+        case 'skinmine':
+            resultText = "O comando Skinmine foi executado. Explore as skins!";
+            break;
+        default:
+            resultText = "Comando desconhecido.";
+            break;
     }
-  }
-  
-  // Função para o comando Ship
-  function shipCommand() {
-    let user1 = prompt("Digite o nome do primeiro usuário:");
-    let user2 = prompt("Digite o nome do segundo usuário:");
-    
-    if (user1 && user2) {
-      let shipResult = `${user1} ❤️ ${user2}`;
-      document.getElementById('ship-result').textContent = `Resultado do Ship: ${shipResult}`;
-    } else {
-      document.getElementById('ship-result').textContent = "Por favor, insira dois nomes de usuários.";
-    }
-  }
-  
+
+    document.getElementById('result').innerHTML = `<p>${resultText}</p>`;
+}
