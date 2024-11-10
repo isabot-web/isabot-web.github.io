@@ -1,3 +1,13 @@
+document.addEventListener("DOMContentLoaded", function () {
+    // Associando eventos de clique aos botões
+    document.getElementById('ping').addEventListener('click', function() { executeCommand('ping'); });
+    document.getElementById('say').addEventListener('click', function() { executeCommand('say'); });
+    document.getElementById('ban').addEventListener('click', function() { executeCommand('ban'); });
+    document.getElementById('kick').addEventListener('click', function() { executeCommand('kick'); });
+    document.getElementById('ship').addEventListener('click', function() { executeCommand('ship'); });
+    document.getElementById('skinmine').addEventListener('click', function() { executeCommand('skinmine'); });
+});
+
 function executeCommand(command) {
     let resultText = "";
 
