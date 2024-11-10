@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bot - Comandos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Comandos do Bot</h1>
+    
+    <div class="category" id="normal-commands">
+      <h2>Comandos Normais</h2>
+      <button onclick="pingCommand()">Ping</button>
+      <p id="ping-result"></p>
+    </div>
+    
+    <div class="category" id="admin-commands">
+      <h2>Comandos Admin</h2>
+      <button onclick="banCommand()">Ban</button>
+      <p id="ban-result"></p>
+    </div>
+    
+    <div class="category" id="entertainment-commands">
+      <h2>Comandos de Entretenimento</h2>
+      <button onclick="shipCommand()">Ship</button>
+      <p id="ship-result"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
